@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>TAP | Customer Service</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <script type='text/javascript'>
+        (function() {
+            function handlePageLoad() {
+                var endpointMatcher = new RegExp("[\\?\\&]endpoint=([^&#]*)");
+                document.getElementById('prechatForm').setAttribute('action',
+                    decodeURIComponent(endpointMatcher.exec(document.location.search)[1].replace("javascript:", "")));
+            } if (window.addEventListener) {
+                window.addEventListener('load', handlePageLoad, false);
+            } else { window.attachEvent('onload', handlePageLoad, false);
+            }})();
+    </script>
+    <h2>Só mais um pouco....</h2>
+    <p>Ajude a servi-lo melhor com a seguinte informação</p>
+
+    <form id="prechatForm" method="post" action="#">
+      <div class="form-group">
+        <label>First Name: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactFirstName' />
+        <label>Last Name: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactLastName' />
+        <label>Subject: </label> <input class="form-control" type='text' name='liveagent.prechat:CaseSubject' />
+      </div>
+      <input type="hidden" name="liveagent.prechat:CaseStatus" value="New" /><br />
+      <input type="hidden" name="liveagent.prechat:CaseOrigin" value="Chat" /><br />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="FirstName,true;LastName,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="FirstName,true;LastName,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Contact" value="FirstName,true;LastName,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.linkToEntity:Contact" value="Case,ContactId" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map:Case" value="Subject,CaseSubject;Status,CaseStatus" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Case" value="Subject,true;Status,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.linkToEntity:Contact" value="Case,ContactId" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Case" value="true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Case" value="CaseId" />
+      <input type="hidden" name="liveagent.prechat.knowledgeSearch:CaseSubject" value="true" />
+      <input type='submit' value='Falar agora' id='prechat_submit' onclick="setName()"/>
+      <script type="text/javascript">
+          function setName() {
+              document.getElementById("prechat_field_name").value =
+                  document.getElementById("firstName").value + " " + document.getElementById("lastName").value;
+          }
+      </script>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

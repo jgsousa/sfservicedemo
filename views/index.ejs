@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <title>TAP | Customer Service</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>TAP Customer Service</h1>
+    <p>Welcome to our claims submission form</p>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+      <input type=hidden name="orgid" value="00D0O000000sZ2V">
+      <input type=hidden name="retURL" value="http://localhost:3000">
+
+      <div class="form-group">
+      <label for="name">Contact Name</label>
+      <input  id="name" class="form-control" maxlength="80" name="name" size="20" type="text" />
+      </div>
+      <div class="form-group">
+      <label for="email">Email</label>
+      <input  id="email"  class="form-control" maxlength="80" name="email" size="20" type="text" />
+      </div>
+      <div class="form-group">
+      <label for="phone">Phone</label><input  id="phone" class="form-control" maxlength="40" name="phone" size="20" type="text" />
+      </div>
+      <div class="form-group">
+      <label for="subject">Subject</label><input  id="subject" class="form-control" maxlength="80" name="subject" size="20" type="text" />
+      </div>
+      <div class="form-group">
+      <label for="description">Description</label><textarea class="form-control" name="description"></textarea>
+      </div>
+      <div class="form-group">
+      <label for="reason">Case Reason</label>
+      <select  id="reason" name="reason" class="form-control">
+        <option value="">--None--</option>
+        <option value="Installation">Installation</option>
+        <option value="Equipment Complexity">Equipment Complexity</option>
+        <option value="Performance">Performance</option>
+        <option value="Breakdown">Breakdown</option>
+        <option value="Equipment Design">Equipment Design</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Other">Other</option>
+      </select>
+      </div>
+      <input type="submit" name="submit" class="btn btn-default">
+
+    </form>
+
+
+    <a id="liveagent_button_online_5730O000000L9s6" href="javascript://Chat" style="display: none;" onclick="start()">
+      Chat Disponível
+    </a>
+    <div id="liveagent_button_offline_5730O000000L9s6" style="display: none;">Chat Indisponível</div>
+    <script type="text/javascript">
+        var start = function(){
+            liveagent.startChat('5730O000000L9s6')
+        }
+        if (!window._laq) { window._laq = []; }
+          window._laq.push(function() {
+              liveagent.showWhenOnline('5730O000000L9s6', document.getElementById('liveagent_button_online_5730O000000L9s6'));
+              liveagent.showWhenOffline('5730O000000L9s6', document.getElementById('liveagent_button_offline_5730O000000L9s6'));
+          });
+    </script>
+
+    <script type='text/javascript' src='https://c.la1-c2-frf.salesforceliveagent.com/content/g/js/41.0/deployment.js'></script>
+    <script type='text/javascript'>
+        liveagent.init('https://d.la1-c2-frf.salesforceliveagent.com/chat', '5720O000000L9gX', '00D0O000000sZ2V');
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
