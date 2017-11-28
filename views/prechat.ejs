@@ -26,14 +26,15 @@
       <div class="form-group">
         <label>First Name: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactFirstName' />
         <label>Last Name: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactLastName' />
+        <label>Email: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactEmail' />
         <label>Subject: </label> <input class="form-control" type='text' name='liveagent.prechat:CaseSubject' />
       </div>
       <input type="hidden" name="liveagent.prechat:CaseStatus" value="New" /><br />
       <input type="hidden" name="liveagent.prechat:CaseOrigin" value="Chat" /><br />
-      <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName" />
-      <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="FirstName,true;LastName,true" />
-      <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="FirstName,true;LastName,true" />
-      <input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Contact" value="FirstName,true;LastName,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName;Email,ContactEmail" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.doFind:Contact" value="FirstName,true;LastName,true;Email,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.isExactMatch:Contact" value="FirstName,true;LastName,true;Email,true" />
+      <input type="hidden" name="liveagent.prechat.findorcreate.map.doCreate:Contact" value="FirstName,true;LastName,true;Email,true" />
       <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
       <input type="hidden" name="liveagent.prechat.findorcreate.showOnCreate:Contact" value="true" />
       <input type="hidden" name="liveagent.prechat.findorcreate.linkToEntity:Contact" value="Case,ContactId" />
