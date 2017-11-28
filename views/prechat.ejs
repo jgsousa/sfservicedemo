@@ -29,6 +29,7 @@
         <label>Email: </label> <input class="form-control" type='text' name='liveagent.prechat:ContactEmail' />
         <label>Subject: </label> <input class="form-control" type='text' name='liveagent.prechat:CaseSubject' />
       </div>
+      <input type='submit' class="btn btn-default" value='Falar agora' id='prechat_submit' onclick="setName()"/>
       <input type="hidden" name="liveagent.prechat:CaseStatus" value="New" /><br />
       <input type="hidden" name="liveagent.prechat:CaseOrigin" value="Chat" /><br />
       <input type="hidden" name="liveagent.prechat.findorcreate.map:Contact" value="FirstName,ContactFirstName;LastName,ContactLastName;Email,ContactEmail" />
@@ -46,7 +47,7 @@
       <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Contact" value="ContactId" />
       <input type="hidden" name="liveagent.prechat.findorcreate.saveToTranscript:Case" value="CaseId" />
       <input type="hidden" name="liveagent.prechat.knowledgeSearch:CaseSubject" value="true" />
-      <input type='submit' value='Falar agora' id='prechat_submit' onclick="setName()"/>
+
       <script type="text/javascript">
           function setName() {
               document.getElementById("prechat_field_name").value =
