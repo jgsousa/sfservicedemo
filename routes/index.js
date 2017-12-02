@@ -10,7 +10,7 @@ var booking1 = {
         { "name" : "Sonia Marto", "email" : "example@example.com"}
     ],
     "segments" : [
-        { "flightNumber" : "TP130", "origin" : "LIS", "destination" : "GVA", "date" : "2017-12-04T18:25:43.511Z" }
+        { "flightNumber" : "TP130", "origin" : "LIS", "destination" : "GVA", "data" : "2017-12-04T18:25:43.511Z" }
     ]
 };
 
