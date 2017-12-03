@@ -31,20 +31,47 @@
       <label for="subject">Subject</label><input  id="subject" class="form-control" maxlength="80" name="subject" size="20" type="text" />
       </div>
       <div class="form-group">
-      <label for="description">Description</label><textarea class="form-control" name="description"></textarea>
+        <label for="type">Type</label>
+        <select  id="type" name="type"><option value="">--None--</option><option value="Others">Others</option>
+          <option value="Atraso">Atraso</option>
+          <option value="Cancelamento">Cancelamento</option>
+          <option value="Recusa de embarque">Recusa de embarque</option>
+          <option value="Bagagem">Bagagem</option>
+          <option value="Programa Victoria">Programa Victoria</option>
+          <option value="Check-in">Check-in</option>
+          <option value="Quiosque Digital">Quiosque Digital</option>
+          <option value="A bordo">A bordo</option>
+          <option value="Reembolsos">Reembolsos</option>
+          <option value="Reservas">Reservas</option>
+        </select>
+        <label for="00N0O00000EFZG6">Sub-Type:</label>
+        <select  id="00N0O00000EFZG6" name="00N0O00000EFZG6" title="Sub-Type"><option value="">--None--</option><option value="Other">Other</option>
+          <option value="Atraso na entrega">Atraso na entrega</option>
+          <option value="Danificada">Danificada</option>
+          <option value="Funcionamento">Funcionamento</option>
+          <option value="Crédito de milhas">Crédito de milhas</option>
+          <option value="Renovação estatuto">Renovação estatuto</option>
+          <option value="Serviço">Serviço</option>
+          <option value="Entretenimento">Entretenimento</option>
+          <option value="Conforto/Lugar">Conforto/Lugar</option>
+          <option value="Refeição servida">Refeição servida</option>
+          <option value="Atendimento telefónico">Atendimento telefónico</option>
+          <option value="Alteração">Alteração</option>
+          <option value="Pedido/Compra de Refeição">Pedido/Compra de Refeição</option>
+          <option value="Pedido/Compra de lugar">Pedido/Compra de lugar</option>
+          <option value="Transporte de animais">Transporte de animais</option>
+          <option value="Assistências especiais">Assistências especiais</option>
+          <option value="Pagamentos">Pagamentos</option>
+          <option value="Documentação">Documentação</option>
+        </select>
+
       </div>
       <div class="form-group">
-      <label for="reason">Case Reason</label>
-      <select  id="reason" name="reason" class="form-control">
-        <option value="">--None--</option>
-        <option value="Installation">Installation</option>
-        <option value="Equipment Complexity">Equipment Complexity</option>
-        <option value="Performance">Performance</option>
-        <option value="Breakdown">Breakdown</option>
-        <option value="Equipment Design">Equipment Design</option>
-        <option value="Feedback">Feedback</option>
-        <option value="Other">Other</option>
-      </select>
+        <label for="00N0O00000EwmOm">Reservation Code:</label>
+        <input  id="00N0O00000EwmOm" maxlength="30" name="00N0O00000EwmOm" size="20" type="text" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label><textarea class="form-control" name="description"></textarea>
       </div>
       <input type="submit" name="submit" class="btn btn-default">
 
