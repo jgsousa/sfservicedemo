@@ -5,6 +5,8 @@ var booking1 = {
     "reservation" : "BNK123",
     "lastname" : "Marto",
     "firstname" : "Cesar",
+    "classe" : "Economy",
+    "fare" : "Discount",
     "passengers" : [
         { "name" : "Cesar Marto" , "email" : "joasousa@deloite.pt" },
         { "name" : "Sonia Marto", "email" : "example@example.com"}
