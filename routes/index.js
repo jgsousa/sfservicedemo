@@ -16,6 +16,23 @@ var booking1 = {
     ]
 };
 
+var booking2 = {
+    "reservation" : "POC123",
+    "lastname" : "Almeida",
+    "firstname" : "Fernando",
+    "classe" : "Economy",
+    "fare" : "Discount",
+    "passengers" : [
+        { "name" : "Fernando Almeida" , "email" : "joasousa@deloitte.pt" },
+        { "name" : "Maria Almeida", "email" : " joasousa@deloitte.pt" },
+        { "name" : "Ana Almeida", "email" : " joasousa@deloitte.pt" }
+    ],
+    "segments" : [
+        { "flightNumber" : "TP1691", "origin" : "LIS", "destination" : "FNC", "data" : "2017-12-29 T19:00:00.511Z" }
+    ]
+};
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -33,6 +50,9 @@ router.get('/booking/:id', function(req, res, next) {
     var id = req.params.id;
     if(id === 'BNK123'){
         res.json({ "status": "OK", "booking" : booking1 });
+    }
+    else if(id === "POC123"){
+        res.json({ "status": "OK", "booking" : booking2 });
     }
     else{
         res.status(500).send({ error: 'Not found!' })
